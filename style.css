@@ -190,19 +190,40 @@ html {
 }
 
 /* Main silder styles end */
-#about {
-    margin: 60px 15px ;
+/* About, practice, attorney styles start */
+#about,
+#practice,
+#attorney,
+#client {
+  padding: 60px 15px;
 }
-#about .container .description_text {
+
+#practice,
+#client {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 30px 15px;
+}
+#about .container .description_text,
+#practice .container .description_text,
+#attorney .container .description_text,
+#client .container .description_text {
   margin: 30px 0;
   font-family: 'Playfair Display', serif;
 }
-#about .container .description_text .main_title {
+#about .container .description_text .main_title,
+#practice .container .description_text .main_title,
+#attorney .container .description_text .main_title,
+#client .container .description_text .main_title {
   padding-left: 15px;
   padding-bottom: 10px;
   border-left: 4px solid #e8bf5d;
 }
-#about .container .description_text .main_desc {
+#about .container .description_text .main_desc,
+#practice .container .description_text .main_desc,
+#attorney .container .description_text .main_desc,
+#client .container .description_text .main_desc {
   padding-left: 15px;
   border-left: 4px solid #e8bf5d;
 }
@@ -236,13 +257,198 @@ html {
   flex-basis: 50%;
 }
 #about .container .about_description .expertise .expertise_item {
-    font-size: .8rem;
-    line-height: 1.6rem;
-    font-weight: light;
+  font-size: 0.8rem;
+  line-height: 1.6rem;
+  font-weight: light;
 }
 
 @media (max-width: 992px) {
-    #about .container .about_description {
-        flex-direction: column;
-      }
+  #about .container .about_description {
+    flex-direction: column;
   }
+}
+
+/* About, practice, attorney styles end */
+
+/* Practice styles start */
+#practice .container .practice_container .practice_inner {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px 0;
+}
+#practice .container .practice_container .practice_inner .practice_element {
+  flex-basis: 50%;
+  display: flex;
+  padding: 25px;
+}
+#practice
+  .container
+  .practice_container
+  .practice_inner
+  .practice_element
+  .icon_wrap {
+  padding: 10px;
+}
+#practice
+  .container
+  .practice_container
+  .practice_inner
+  .practice_element
+  .icon_wrap
+  .icon {
+  color: #e8bf5d;
+  font-size: 2rem;
+}
+#practice
+  .container
+  .practice_container
+  .practice_inner
+  .practice_element
+  .desc {
+  padding-left: 15px;
+}
+#practice
+  .container
+  .practice_container
+  .practice_inner
+  .practice_element
+  .desc
+  .desc_title {
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+@media (max-width: 992px) {
+  #practice .container .practice_container .practice_inner {
+    flex-direction: column;
+  }
+}
+/* Practice styles end */
+
+/* Attorney styles start */
+
+#attorney .container .attorney_container {
+  display: flex;
+  flex-wrap: wrap;
+}
+#attorney .container .attorney_container .attorney_image {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 10px;
+}
+#attorney .container .attorney_container .attorney_image .person_name {
+  font-family: 'Playfair Display', serif;
+  padding-top: 20px;
+  font-size: 1.2rem;
+}
+#attorney .container .attorney_container .attorney_image .person_position {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 1200px) {
+  #attorney .container .attorney_container .attorney_image {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 992px) {
+  #attorney .container .attorney_container .attorney_image .picture {
+    width: 90%;
+  }
+}
+@media (max-width: 576px) {
+  #attorney .container .attorney_container .attorney_image {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+/* Attorney styles end */
+
+/* Client styles start  */
+
+#client {
+  background-image: url('/images/client_bcg.png');
+  background-position: center;
+  background-size: cover;
+}
+#client .container .client_container {
+  display: flex;
+}
+#client .container .client_container .client_image {
+  padding: 0 25px 25px 0;
+  position: relative;
+}
+#client .container .client_container .client_image .client_image_background {
+  position: absolute;
+  top: 0;
+  transform: translate(5%, 5%);
+  background-color: #e8bf5d;
+  width: 370px;
+  height: 305px;
+  z-index: -1;
+}
+#client .container .client_container .client_opinion {
+  padding: 15px;
+  display: flex;
+  align-items: flex-start;
+}
+#client .container .client_container .client_opinion .quote_mark {
+  padding: 0 10px;
+}
+#client .container .client_container .client_opinion .quote_mark .mark {
+  font-family: 'Playfair Display', serif;
+  font-size: 7rem;
+  line-height: 3rem;
+  color: #535251;
+}
+#client
+  .container
+  .client_container
+  .client_opinion
+  .client_quote
+  .client_text {
+  padding-bottom: 10px;
+  line-height: 1.7rem;
+  font-size: 0.9rem;
+}
+#client
+  .container
+  .client_container
+  .client_opinion
+  .client_quote
+  .client_name {
+  padding-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+#client
+  .container
+  .client_container
+  .client_opinion
+  .client_quote
+  .client_position {
+  font-size: 0.8rem;
+}
+#client .container .client_switch {
+  margin: 15px 0;
+}
+#client .container .client_switch .dots {
+  display: flex;
+  margin: 0 auto;
+  width: 40px;
+  justify-content: space-between;
+}
+#client .container .client_switch .dots .dot {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid white;
+  cursor: pointer;
+}
+#client .container .client_switch .dots .active_dot {
+  background-color: white;
+}
+
