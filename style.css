@@ -192,30 +192,40 @@ html {
 /* Main silder styles end */
 /* About, practice, attorney styles start */
 #about,
-#practice,
 #attorney,
-#client {
+#publications,
+#contact {
   padding: 60px 15px;
 }
 
 #practice,
-#client {
+#client,
+#questions {
   background-color: black;
   color: white;
   margin: 0;
   padding: 30px 15px;
 }
+#questions {
+  padding-bottom: 50px;
+}
 #about .container .description_text,
 #practice .container .description_text,
 #attorney .container .description_text,
-#client .container .description_text {
+#client .container .description_text,
+#publications .container .description_text,
+#questions .container .description_text,
+#contact .container .description_text {
   margin: 30px 0;
   font-family: 'Playfair Display', serif;
 }
 #about .container .description_text .main_title,
 #practice .container .description_text .main_title,
 #attorney .container .description_text .main_title,
-#client .container .description_text .main_title {
+#client .container .description_text .main_title,
+#publications .container .description_text .main_title,
+#questions .container .description_text .main_title,
+#contact .container .description_text .main_title {
   padding-left: 15px;
   padding-bottom: 10px;
   border-left: 4px solid #e8bf5d;
@@ -223,7 +233,10 @@ html {
 #about .container .description_text .main_desc,
 #practice .container .description_text .main_desc,
 #attorney .container .description_text .main_desc,
-#client .container .description_text .main_desc {
+#client .container .description_text .main_desc,
+#publications .container .description_text .main_desc,
+#questions .container .description_text .main_desc,
+#contact .container .description_text .main_desc {
   padding-left: 15px;
   border-left: 4px solid #e8bf5d;
 }
@@ -451,4 +464,172 @@ html {
 #client .container .client_switch .dots .active_dot {
   background-color: white;
 }
+/* Client styles end  */
+/* Publications styles start */
+#publications .container .publications_cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#publications .container .publications_cards .card {
+  flex: 0 0 30%;
+  max-width: 30%;
+  padding: 0 10px;
+  padding-bottom: 20px;
+  border-bottom: 5px solid #e8bf5d;
+}
+#publications .container .publications_cards .card .card_image {
+  width: 100%;
+}
+#publications .container .publications_cards .card .card_title {
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 1.2rem;
+}
+#publications .container .publications_cards .card .card_author {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+#publications .container .publications_cards .card .card_author .author {
+  font-weight: bold;
+}
+#publications .container .publications_cards .card .card_author .author span {
+  margin-right: 5px;
+  font-weight: normal;
+}
+#publications .container .publications_cards .card .card_content {
+  margin-top: 15px;
+  line-height: 2rem;
+  font-size: 0.9rem;
+}
+#publications .container .publications_cards .card .social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+#publications .container .publications_cards .card .social .share,
+#publications .container .publications_cards .card .social .comments {
+  cursor: pointer;
+}
 
+@media (max-width: 992px) {
+  #publications .container .publications_cards {
+    flex-direction: column;
+  }
+  #publications .container .publications_cards .card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+}
+/* Publications styles end */
+/* Questions styles start  */
+
+#questions .container .questions_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#questions .container .questions_container .questions_list,
+#questions .container .questions_container .question_text {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+#questions .container .questions_container .questions_list .questions {
+  list-style: none;
+}
+#questions
+  .container
+  .questions_container
+  .questions_list
+  .questions
+  .question {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  border-bottom: 2px solid #e8bf5d;
+  color: white;
+}
+
+#questions .container .questions_container .questions_list .questions .active {
+  color: #e8bf5d;
+}
+#questions
+  .container
+  .questions_container
+  .questions_list
+  .questions
+  .question
+  .mark {
+  padding-right: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: white;
+}
+
+#questions .container .questions_container .question_text {
+  padding: 25px;
+  background-color: #e8bf5d;
+  border-radius: 5px;
+}
+#questions .container .questions_container .question_text .question_content {
+  color: black;
+  line-height: 1.5rem;
+}
+
+/* Questions styles end  */
+
+/* Contact styles start  */
+
+#contact .container .form_container {
+  width: 100%;
+}
+#contact .container .form_container .contact {
+  display: flex;
+  margin: 0 auto;
+  width: 781px;
+  justify-content: space-between;
+  padding: 59px 35px;
+  box-shadow: -1px 10px 19px -4px rgb(0 0 0 / 26%);
+}
+#contact .container .form_container .contact .contact_form {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+}
+#contact .container .form_container .contact .contact_form #name,
+#contact .container .form_container .contact .contact_form #email,
+#contact .container .form_container .contact .contact_form #phone,
+#contact .container .form_container .contact .contact_form #message {
+  border: none;
+  border-bottom: 1px solid #c6bfbf;
+  margin-bottom: 15px;
+  padding: 6px 0px;
+  font-size: 12px;
+}
+#contact .container .form_container .contact .contact_form .form_sbmit {
+  padding: 15px;
+  width: 70%;
+  border-radius: 39px;
+  border: none;
+  background-color: #e8bf5d;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+#contact .container .form_container .contact .map {
+  position: relative;
+}
+#contact .container .form_container .contact .map .map_image_background {
+  position: absolute;
+  top: 0;
+  transform: translate(-5%, 5%);
+  background-color: #e8bf5d;
+  width: 363px;
+  height: 363px;
+  z-index: -1;
+}
