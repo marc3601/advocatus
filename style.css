@@ -9,6 +9,30 @@ html {
   font-family: 'Open Sans', sans-serif;
 }
 
+.dark_mode {
+  background-color: black !important;
+  color: yellow !important;
+}
+
+.dark_font {
+  color: yellow !important;
+}
+
+.light_burger {
+  background-color: white !important;
+}
+
+.dark_mode_logo {
+  filter: invert(100%);
+}
+
+.font_medium {
+  font-size: 1.2rem !important;
+}
+.font_large {
+  font-size: 1.3rem !important;
+}
+
 @media (max-width: 767px) {
   .container {
     width: 70%;
@@ -69,6 +93,18 @@ html {
   display: flex;
   align-items: center;
 }
+.container .navigation .navigation_buttons .contrast {
+  cursor: pointer;
+}
+.container .navigation .navigation_buttons .font_size {
+  margin-left: 15px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.container .navigation .navigation_buttons .font_size .default {
+  margin-left: 10px;
+}
 .container .navigation .burger {
   display: none;
 }
@@ -97,6 +133,7 @@ html {
     left: 0;
     width: 100%;
     text-align: center;
+    padding-bottom: 15px;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
     z-index: 5;
@@ -145,12 +182,7 @@ html {
 }
 .main_gallery .carousel_container .carousel_item .carousel_image {
   width: 100%;
-  transition: .5s ease;
-}
-.main_gallery .carousel_container .carousel_item .image_shadow {
-  width: 100%;
-  position: absolute;
-  transition: .2s ease;
+  transition: 0.5s ease;
 }
 
 .main_gallery .carousel_container .carousel_item .carousel_item_description {
@@ -275,7 +307,8 @@ html {
 
 #practice,
 #client,
-#questions {
+#questions,
+#footer {
   background-color: black;
   color: white;
   margin: 0;
@@ -663,7 +696,7 @@ html {
   .questions_list
   .questions
   .question
-  .mark {
+  .marked {
   padding-right: 10px;
   font-size: 1.2rem;
   font-weight: bold;
@@ -718,22 +751,22 @@ html {
   padding: 59px 35px;
   box-shadow: -1px 10px 19px -4px rgb(0 0 0 / 26%);
 }
-#contact .container .form_container .contact .contact_form {
+#contact .container .form_container .contact #contact_form {
   display: flex;
   flex-direction: column;
   padding: 30px;
 }
-#contact .container .form_container .contact .contact_form #name,
-#contact .container .form_container .contact .contact_form #email,
-#contact .container .form_container .contact .contact_form #phone,
-#contact .container .form_container .contact .contact_form #message {
+#contact .container .form_container .contact #contact_form #name,
+#contact .container .form_container .contact #contact_form #email,
+#contact .container .form_container .contact #contact_form #phone,
+#contact .container .form_container .contact #contact_form #message {
   border: none;
   border-bottom: 1px solid #c6bfbf;
   margin-bottom: 15px;
   padding: 6px 0px;
   font-size: 12px;
 }
-#contact .container .form_container .contact .contact_form .form_sbmit {
+#contact .container .form_container .contact #contact_form .form_sbmit {
   padding: 15px;
   width: 70%;
   border-radius: 39px;
@@ -765,3 +798,16 @@ html {
     display: none;
   }
 }
+
+/* Contact styles end */
+
+/* Footer styles start  */
+#footer .container .footer_container {
+  display: flex;
+  justify-content: space-between;
+}
+#footer .container .footer_container .social .social_icon {
+  margin-right: 5px;
+}
+
+/* Footer styles end  */

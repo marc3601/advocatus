@@ -31,7 +31,14 @@
                     <a href="#publications" class="nav_button">Publications</a>
                     <a href="#questions" class="nav_button">FAQ</a>
                     <a href="#contact" class="nav_button">Contact</a>
-
+                    <div class="contrast">
+                        <i class="fas fa-adjust"></i>
+                    </div>
+                    <div class="font_size">
+                        <span id="1" class="default">A</span>
+                        <span id="2" class="default">A+</span>
+                        <span id="3" class="default">A++</span>
+                    </div>
                 </section>
                 <div class="burger">
                     <div class="bar"></div>
@@ -45,8 +52,7 @@
         <main class="main_gallery">
             <div class="carousel_container">
                 <div class="carousel_item">
-                    <img class="image_shadow" src="/images/innershadow.png" alt="">
-                    <img class="carousel_image" src="/images/stock-photo-177211577.png" alt="Lawyer">
+                    <img class="carousel_image" src="/images/slide.jpg" alt="Lawyer">
                     <div class="carousel_item_description">
                         <div class="description_text">
                             <h1 class="main_title">Adam Suarez</h1>
@@ -208,7 +214,7 @@
         </section>
         <!-- Attorney section end  -->
 
-        <!-- Client styles start  -->
+        <!-- Client section start  -->
         <section id="client">
             <div class="container">
                 <div class="description_text">
@@ -239,16 +245,16 @@
                 </div>
                 <div class="client_switch">
                     <div class="dots">
-                        <div class="dot active_dot"></div>
-                        <div class="dot"></div>
-                        <div class="dot"></div>
+                        <div id="1" class="dot active_dot"></div>
+                        <div id="2" class="dot"></div>
+                        <div id="3" class="dot"></div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- Client styles end  -->
+        <!-- Client section end  -->
 
-        <!-- Publications styles start  -->
+        <!-- Publications section start  -->
         <section id="publications">
             <div class="container">
                 <div class="description_text">
@@ -309,9 +315,9 @@
                 </div>
             </div>
         </section>
-        <!-- Publications styles end -->
+        <!-- Publications section end -->
 
-        <!-- Questions styles start  -->
+        <!-- Questions section start  -->
         <section id="questions">
             <div class="container">
                 <div class="description_text">
@@ -323,39 +329,40 @@
                 <div class="questions_container">
                     <div class="questions_list">
                         <ul class="questions">
-                            <li id="1" class="question">
+                            <li id="1" class="question active">
                                 <p class="quest">What paperwork do I need to complete to file for divorce.</p>
-                                <p id="1" class="mark">-</p>
+                                <p id="1" class="marked">-</p>
                             </li>
                             <li id="2" class="question">
                                 <p class="quest">How do I change my custody and support orders?</p>
-                                <p id="2" class="mark">+</p>
+                                <p id="2" class="marked">&#x2B</p>
                             </li>
                             <li id="3" class="question">
                                 <p class="quest">How to make a General Diary?</p>
-                                <p id="3" class="mark">+</p>
+                                <p id="3" class="marked">&#x2B</p>
                             </li>
                             <li id="4" class="question">
                                 <p class="quest">What paperwork do I need to complete to file for divorce?</p>
-                                <p id="4" class="mark">+</p>
+                                <p id="4" class="marked">&#x2B</p>
                             </li>
                             <li id="5" class="question">
                                 <p class="quest">How do I protect a business name?</p>
-                                <p id="5" class="mark">+</p>
+                                <p id="5" class="marked">&#x2B</p>
                             </li>
                             <li id="6" class="question">
                                 <p class="quest">Should I incorporate my business?</p>
-                                <p id="6" class="mark">+</p>
+                                <p id="6" class="marked">&#x2B</p>
                             </li>
                         </ul>
                     </div>
                     <div class="question_text">
-                        <div class="question_content">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                            Necessitatibus dicta aspernatur, ex sed dignissimos quia, harum ut quod enim voluptatibus
-                            placeat voluptas commodi porro minima provident aliquid? Excepturi, necessitatibus ea!
-                            Illum, non! Asperiores molestias nam modi quo, odit blanditiis minima vitae perspiciatis
-                            obcaecati eos harum corrupti nesciunt laborum sed a neque error magni. Corrupti, pariatur.
-                            Reprehenderit labore et voluptates dolor? </div>
+                        <div class="question_content">Lorem Ipsum is simply dummy text of the printing and typesetting
+                            industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when
+                            an unknown printer took a galley of type and scrambled it to make a type specimen book. It
+                            has survived not only five centuries, but also the leap into electronic typesetting,
+                            remaining essentially unchanged. It was popularised in the 1960s with the release of
+                            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+                            software like Aldus PageMaker including versions of Lorem Ipsum.</div>
                     </div>
                 </div>
             </div>
@@ -372,23 +379,40 @@
                 </div>
                 <div class="form_container">
                     <div class="contact">
-                        <form action="/" class="contact_form">
-                            <input type="text" id="name" placeholder="Enter your name...">
-                            <input type="email" id="email" placeholder="Enter your email..">
-                            <input type="number" id="phone" placeholder="Enter your phone..">
-                            <textarea name="message" id="message" cols="30" rows="10"
+                        <form action="https://formspree.io/f/xwkavjnr" method="POST" id="contact_form">
+                            <input type="text" id="name" required placeholder="Enter your name...">
+                            <input type="email" id="email" required placeholder="Enter your email..">
+                            <input type="number" id="phone" required placeholder="Enter your phone..">
+                            <textarea name="message" id="message" required cols="30" rows="10"
                                 placeholder="Enter your message..."></textarea>
                             <button class="form_sbmit">Send message</button>
+                            <div class="status"></div>
                         </form>
                         <div class="map">
                             <img class="map_image" src="/images/map.png" alt="">
                             <div class="map_image_background"></div>
                         </div>
+
                     </div>
                 </div>
             </div>
         </section>
         <!-- Contact section end  -->
+        <!-- Footer section start  -->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer_container">
+                    <div class="copyright">Copyright © Symu.co</div>
+                    <div class="social">
+                        <i class="fab fa-facebook-f social_icon"></i>
+                        <i class="fab fa-twitter social_icon"></i>
+                        <i class="fab fa-google-plus-g social_icon"></i>
+                        <i class="fab fa-instagram social_icon"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Footer section end  -->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
